@@ -17,6 +17,11 @@
                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Address
                 </th>
+
+                <th scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+
+                </th>
             </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -35,6 +40,9 @@
                     </td>
                     <td class="px-6 py-4 whitespace-no-wrap">
                         <div class="text-sm leading-5 text-gray-900">{{$user->profile->address}}</div>
+                    </td>
+                    <td>
+                        <a href="{{route('users.show', $user->id)}}" class="text-sm font-medium text-indigo-600 hover:text-indigo-500"> View</a>
                     </td>
                 </tr>
             @endforeach

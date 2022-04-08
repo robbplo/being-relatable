@@ -12,4 +12,11 @@ class UserController extends Controller
             'users' => User::all(),
         ]);
     }
+
+    public function show(User $user)
+    {
+        return view('users.show', [
+            'user' => $user,
+        ]);
+    }
 }
