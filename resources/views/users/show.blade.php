@@ -51,6 +51,13 @@
                 </dl>
             </div>
         </div>
-
     </div>
+
+
+    <h2 class="text-xl my-4 font-bold">Comments</h2>
+    @foreach($user->comments as $comment)
+        <div class="px-6 py-4 mb-4 border rounded-lg prose">
+            {{ $comment->text }}
+        </div>
+    @endforeach
 @endsection

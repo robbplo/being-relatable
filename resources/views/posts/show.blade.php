@@ -18,6 +18,14 @@
                 </div>
         </div>
 
-        <p class="text-gray-700 whitespace-pre-wrap">{{{ $post->body }}}</p>
+        <p class="text-gray-700 whitespace-pre-wrap">{{ $post->body }}</p>
+
+        <h2 class="text-xl my-4">Comments</h2>
+        @foreach($post->comments as $comment)
+            <div class="px-6 py-4 mb-4 border rounded-lg">
+                {{ $comment->text }}
+            </div>
+        @endforeach
     </div>
+
 @endsection
